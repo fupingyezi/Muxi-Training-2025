@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    .container {
+    position: relative;
+    width: 300px;
+    height: 200px;
+    background: #89c4f4;
+    margin: 100px auto;
+  }
+
+  .fan {
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: conic-gradient(#f39c12 0deg 90deg, transparent 90deg 360deg);
+  }
+
+  .fan.left-top {
+    top: -40px;
+    left: -40px;
+    transform: rotate(90deg);
+  }
+
+  .fan.right-bottom {
+    bottom: -40px;
+    right: -40px;
+    transform: rotate(270deg);
+  }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="fan left-top"></div>
+        <div class="fan right-bottom"></div>
+    </div>
+</body>
+</html>
