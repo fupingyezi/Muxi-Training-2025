@@ -1,0 +1,22 @@
+version: '3.8'
+services:
+  test:
+    image: test:v1.0.0
+    container_name: demo
+    restart: always
+    ports:
+      - "8080:8080"
+
+  mysql:
+    image: mysql:8.0
+    container_name: my-mysql
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: chenhaoqi318912    # 设置root密码
+      MYSQL_DATABASE: demo         # 初始化数据库
+      MYSQL_USER: demo           # 创建用户
+      MYSQL_PASSWORD: test123         # 用户密码
+    ports:
+      - "3307:3306"
+    volumes:
+      - ./mysql-data:/var/lib/mysql
